@@ -1,6 +1,7 @@
 {
-    "description": "Exhaustive set of COBOL statements and intrinsic functions",
+    "description": "Create ECB Payment Statistics per Regulation ECB 2020/59",
     "runtime": "jes2",
     "language": "cobol",
-    "filesystems": [ "qsam", "vsam" ]
+    "filesystem": "qsam",
+    "features" : [ "XML Generate" ]
 }
