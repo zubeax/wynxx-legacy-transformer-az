@@ -1,95 +1,89 @@
-# ECB Payments Statistics Demo (COBOL + DB2 on z/OS)
 
-This package provides a working **IBM Enterprise COBOL** example with **embedded SQL for Db2 for z/OS** which ingests transactional payment data, aggregates it according to the core dimensions in the **ECB payments statistics** amending Regulation **ECB/2020/59** (published as **Regulation (EU) 2020/2011**) and emits a compact **XML** file using the COBOL `XML GENERATE` feature.
+# CICS/DB2 Sample – Client/Order Management
 
-> ⚠️ **Scope note**: This implementation focuses on the essentials of *Table 4a / Table 9* style aggregates (payment service × initiation channel × SCA) to demonstrate the end‑to‑end flow (input → processing → formatting). National Central Banks publish official **XSDs** and submission guides. For production reporting you must map the output to your NCB’s XML/XSD and validation rules.
+This package contains a minimal, end-to-end example of an **IBM Enterprise COBOL** program for **CICS TS 6.1** that accesses **Db2 13 for z/OS** to maintain client static data and track orders. It includes:
+
+- COBOL CICS/Db2 program (`CLORDCIC`) with pseudo-conversational flow
+- BMS mapset (`CLMAPS`) with three maps (menu, client CRUD, order CRUD)
+- Db2 DDL (database, tablespaces, tables, indexes, grants)
+- JCL to assemble BMS, precompile/compile/link/bind COBOL, create the database, and prime it with data using the Db2 **LOAD** utility
+- Plausible random load data files (`clients.dat`, `orders.dat`)
+
+> **Note**: Adjust HLQs, libraries, subsystem ids, and procedures to your site standards before submitting jobs.
 
 ## Contents
 
 ```
-ecb-paystats/
-  src/
-    PAYSTATS01.cbl          # main driver (CALLs subroutines)
-    SUBINP.cbl              # input: reads Db2 (EXEC SQL) and fills in-memory table
-    SUBAGG.cbl              # processing: aggregates into service×channel×SCA buckets
-    SUBFMT.cbl              # formatting: XML GENERATE to a sequential dataset
-    copybooks/
-      PAYSTATS-COMMON.cpy   # shared record/table layouts
-  db/
-    ddl_ecb_paystats_db2.sql         # Db2 DDL (schema + tables)
-    sample_load/
-      PAYMENT_TRANSACTIONS.csv       # ≥1,200 sample transactions (Q1‑2025)
-      LOOKUP_*.csv                   # lookups for code lists (optional)
-      load_payment_transactions.jcl  # template for DSNUTILB LOAD from CSV
-  jcl/
-    create_db_objects.jcl    # run DDL via DSNTEP2/IKJEFT01
-    build_compile_link.jcl   # DSNHPC precompile + IGYCRCTL compile + IEWL linkedit + BIND
-    run_program.jcl          # run under Db2 attachment; writes XML to dataset
-  out/
-    (placeholder for PAYSTATS.xml created on z/OS)
+cics_db2_sample/
+  src/cobol/CLORDCIC.cbl
+  src/bms/CLMAPS.bms
+  db/ddl/db2_ddl.sql
+  jcl/assemble_bms.jcl
+  jcl/compile_bind.jcl
+  jcl/create_db.jcl
+  jcl/bind_plan_package.jcl (included inside compile_bind)
+  jcl/allocate_load_datasets.jcl
+  jcl/load_clients.jcl
+  jcl/load_orders.jcl
+  data/clients.dat
+  data/orders.dat
+  README.md
 ```
 
-## Data model (Db2)
+## Build order
 
-- **PAYSTATS.PAYMENT_TRANSACTIONS** — captures the main variables needed to compile ECB payment statistics: `SERVICE_CODE` (credit transfers, direct debits, card, e‑money, cash withdrawals, cheques, money remittances, other), `INIT_CHANNEL` (paper/electronic/remote/mobile/PIS), **SCA** and reason (where not applied), optional `SCHEME_CODE` (e.g. SEPA SCT/SDD, card scheme), card **MCC**, **POS country**, payer/payee residency, amount (EUR). The fields reflect the categories and definitions in ECB/2020/59 (Annex I/II).
+1. **Assemble BMS maps** (`jcl/assemble_bms.jcl`) using the supplied `DFHMAPS` proc to produce the **physical mapset** in your CICS LOADLIB and the **symbolic copybook** into `your.cobol.copylib`.
+   - Put the physical mapset load module in a library available to the region through **DFHRPL** or a dynamic LIBRARY resource. citeturn1search45turn1search40turn1search44
+2. **Create Db2 database & objects** using `jcl/create_db.jcl`, which runs the SQL in `db/ddl/db2_ddl.sql` via **DSNTEP2** dynamic SQL program. Ensure `SYSPRINT` LRECL conforms (133 by default). citeturn1search34
+3. **Precompile/Compile/Link** the COBOL program with `jcl/compile_bind.jcl` (uses **DSNHPC** precompiler, COBOL compiler, and IEWL link-edit), then **BIND** a package and a plan with **IKJEFT01/DSN** commands. citeturn1search28turn1search31turn1search13
+4. **Allocate and upload load data** (`jcl/allocate_load_datasets.jcl`), then **LOAD** the two tables with `jcl/load_clients.jcl` and `jcl/load_orders.jcl` using the Db2 **LOAD** utility with delimited input (`TERMINATED BY '|'`). citeturn1search11turn1search12
 
-- Lookup tables for service, channel, SCA reason, scheme, country, MCC are included for clarity and validation.
+## Installing in a CICS TS 6.1 region (CICSTS61)
 
-## Build & run (z/OS)
+1. Ensure the **mapset** and **program** load modules are available to the region (DFHRPL concatenation or dynamic LIBRARY). Then define the resources with RDO/`CEDA`:
 
-1. **Create Db2 objects**
-   - Upload `db/ddl_ecb_paystats_db2.sql` to a dataset and run `jcl/create_db_objects.jcl` (paste the SQL into `SYSIN` or point DSNTEP2 to your dataset). Update `&SSID` and library names.
-
-2. **Load sample data**
-   - Transfer `db/sample_load/PAYMENT_TRANSACTIONS.csv` to a z/OS sequential dataset in text (ASCII→EBCDIC) with `RECFM=VB,LRECL≥512` (or use z/OS UNIX).
-   - Edit `db/sample_load/load_payment_transactions.jcl`: set `&INDSN` to the uploaded dataset; submit to load via `DSNUTILB`.
-   - Optional: load the LOOKUP_*.csv into your own reference tables as needed.
-
-3. **Prepare source libraries**
-   - Create PDS members for `SRC`, `OBJ`, `DBRM`, `LOAD`, and a copybook PDS (or use PDSE). Place the `.cbl` files into `SRC` members (`PAYSTATS01`, `SUBINP`, `SUBAGG`, `SUBFMT`) and `copybooks/PAYSTATS-COMMON.cpy` into your copybook library referenced by `SYSCPY`.
-
-4. **Build**
-   - Submit `jcl/build_compile_link.jcl` after setting `&HLQ`, `&SSID`, and library symbols to your installation values. This JCL **precompiles** the SQL modules (PAYSTATS01, SUBINP), **compiles** all modules, **link‑edits** a single load module `PAYSTATS01` and **BINDs** the Db2 packages and plan.
-
-5. **Run**
-   - Submit `jcl/run_program.jcl`. The job allocates `&HLQ..OUT.PAYSTATS.XML` and runs the program under Db2. The output XML contains aggregates for **Q1‑2025** and **country DE** (defaults in the main program’s WS variables). Adjust the reference period and country in `PAYSTATS01.cbl` if needed.
-
-## Program flow & responsibilities
-
-- **PAYSTATS01 (main)**: Sets the reference period/country, `CALL 'SUBINP'`, then `CALL 'SUBAGG'`, then `CALL 'SUBFMT'`. Writes the XML buffer to `OUTFILE`.
-- **SUBINP (input)**: Uses a **cursor** to fetch rows from `PAYSTATS.PAYMENT_TRANSACTIONS` filtered by `TRANS_TS BETWEEN :DATE_FROM AND :DATE_TO` and `(PAYER_COUNTRY= :COUNTRY OR PAYEE_COUNTRY= :COUNTRY)`, and fills the in‑memory table (`OCCURS … DEPENDING ON`).
-- **SUBAGG (processing)**: Pure COBOL aggregation into distinct **service × initiation channel × SCA** buckets with counters and totals.
-- **SUBFMT (formatting)**: Copies aggregates into an XML‑friendly structure and issues `XML GENERATE` with UTF‑8 encoding.
-
-### XML structure (produced by `SUBFMT`)
-
-```xml
-<WS-XML-DOC>
-  <HEADER>
-    <COUNTRY>DE</COUNTRY>
-    <REF-YEAR>2025</REF-YEAR>
-    <REF-HALF>H1</REF-HALF>
-    <REF-QUARTER>Q1</REF-QUARTER>
-  </HEADER>
-  <AGGREGATES>
-    <ITEM>
-      <SERVICE>CREDIT_TRANSFER</SERVICE>
-      <INITIATION-CHANNEL>ELECTRONIC</INITIATION-CHANNEL>
-      <SCA>Y</SCA>
-      <TRANSACTION-COUNT>…</TRANSACTION-COUNT>
-      <TOTAL-VALUE-EUR>…</TOTAL-VALUE-EUR>
-    </ITEM>
-    …
-  </AGGREGATES>
-</WS-XML-DOC>
+```
+CEDA DEF GROUP(CLAPPGRP) MAPSET(CLMAPS)  DESCRIPTION('Client/Order maps')
+CEDA DEF GROUP(CLAPPGRP) PROGRAM(CLORDCIC) LANGUAGE(COBOL) DATALOCATION(ANY) CONCURRENCY(THREADSAFE)
+CEDA DEF GROUP(CLAPPGRP) TRANSACTION(CLOR) PROGRAM(CLORDCIC) PROFILE()
+CEDA DEF GROUP(CLAPPGRP) DB2CONN(DB2A) DB2ID(DB2A)
+CEDA DEF GROUP(CLAPPGRP) DB2ENTRY(CLE1) THREADLIMIT(10) PLAN(CLORDPLN)
+CEDA DEF GROUP(CLAPPGRP) DB2TRAN(CLD1) ENTRY(CLE1) TRANSID(CLOR)
+CEDA INSTALL GROUP(CLAPPGRP)
 ```
 
-## Notes & assumptions
+   - **DB2CONN/DB2ENTRY/DB2TRAN** are the standard CICS–Db2 attachment resources used to connect the region to Db2 and route transactions to threads/plans. Bind your package(s) to a plan and associate it via DB2ENTRY/DB2TRAN. citeturn1search2turn1search1
+   - After deploying code, use `CEMT SET PROGRAM(CLORDCIC) NEWCOPY` and (if needed) `CEMT SET MAPSET(CLMAPS) NEWCOPY`. citeturn1search40
 
-- **Submission format**: The ECB regulation foresees **quarterly and semi‑annual** reporting with detailed breakdowns (including fraud, POS vs. counterpart geography, and MCC for cards). NCBs provide the **authoritative XSDs** and validation rulebooks. This demo concentrates on a subset sufficient to show how to **map, aggregate and emit XML**; extend the schema and `SUBAGG` as required for your jurisdiction.
-- **Fraud data**: A `FRAUD_FLAG`/`FRAUD_ORIGIN` is present in the table to facilitate extension to **Table 5** style outputs; the current XML focuses on non‑fraud aggregates.
-- **Card specifics**: `MCC` and `POS_COUNTRY` columns exist to facilitate cross‑border and MCC analyses.
+2. Start the Db2 connection: `CEMT SET DB2CONN START` and verify with `CEMT INQUIRE DB2CONN`. citeturn1search2
 
-## License
+3. From a 3270 terminal, run transaction **CLOR** to reach the menu. Use PF3 or clear to exit.
 
-MIT (for this demo code and data). Replace all placeholders before use in production.
+## Program notes
+
+- The COBOL program uses `EXEC CICS SEND/RECEIVE MAP` against the **CLMAPS** BMS mapset. Update flow is pseudo‑conversational via `RETURN TRANSID('CLOR') COMMAREA(...)`. The symbolic map copybook is produced by assembling the BMS with `LANG=COBOL`. citeturn1search46turn1search49
+- SQL is embedded with host variables and precompiled by **DSNHPC**. BIND creates a **package** (collection `CLAPPKG`) and a **plan** (`CLORDPLN`). The job stream uses **IKJEFT01** to issue BIND commands. citeturn1search28turn1search13
+- The DDL uses the default stogroup `SYSDEFLT` and two simple tablespaces. Adjust bufferpools and stogroup to your shop standards.
+- The LOAD control statements use delimited input (`|`) and external decimal for amounts; they follow Db2 LOAD utility conventions for data sets and required DD names. citeturn1search11turn1search12
+
+## Troubleshooting quick tips
+
+- **DSNTEP2** abend U4038 reason 1 usually means `SYSPRINT` LRECL doesn't match the program's page width (133). Allocate `SYSPRINT` with `RECFM=FBA,LRECL=133`, or omit DCB so defaults apply. citeturn1search34
+- If BIND fails with `SQLERROR (NOPACKAGE)` or similar, confirm DBRM was created in the precompile step and that collection/qualifier match your BIND JCL. citeturn1search16
+- If the CICS program gets `SQLCODE -923` or `-805`, check that CICS is connected to Db2 and that your package exists and is in a plan referenced by DB2ENTRY/DB2TRAN. citeturn1search2
+
+## Security and environments
+
+- Replace public GRANTs with least-privilege GRANTs appropriate to your runtime authid.
+- All dataset and library names in JCL are examples; coordinate with your system programmer for correct procs, libraries, and APF/LPA considerations in CTS 6.1+. citeturn1search42
+
+## Credits & References
+
+- IBM Docs: **DSNTEP2** sample dynamic SQL program and LRECL requirements. citeturn1search34
+- IBM Docs: **Db2 LOAD** utility – required DD names and sample control statements. citeturn1search11turn1search12
+- IBM Docs / Community samples: **Db2 precompiler & COBOL compile JCL**, **BIND** samples. citeturn1search28turn1search31turn1search13
+- IBM Docs: **CICS BMS** map creation and installation; DFHRPL/dynamic LIBRARY usage. citeturn1search45turn1search43turn1search44
+- IBM Docs: **CICS–Db2 connection** resources (**DB2CONN/DB2ENTRY/DB2TRAN**). citeturn1search2turn1search1
+
+---
+Generated on 2026-03-20 08:35 UTC.

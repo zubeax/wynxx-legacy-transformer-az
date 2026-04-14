@@ -1,16 +1,11 @@
-generate an ibm enterprise cobol program that creates the ecb payments statistics file as specified in the pdf document 
-Regulation ECB 2020/59 amending Regulation ECB 2013/43 on Payment Statistics.
+generate an ibm enterprise cobol program that interfaces to a simple db2 v13 database for managing client static data and tracking orders.
+generate the ddl for creating the database.
+generate the cics bms user interface for querying the database and to insert/update/delete records.
 
-generate the ddl for a db2 database that contains all entities and fields required to create the statistic
-and add embeded sql statements in the generated cobol program to read them.
-generate sample load datasets with plausible transaction data for the db2 tables.
-there should be at least 1000 transactions distributed over the categories from the statistic.
-the cobol program should read and aggregate the data, then format them into the specified output dataset
-with the cobol xml generate feature.
+generate jcl to build the program executables, assembling the bms maps and creating the database. 
+generate instructions how to install the program and the bms maps in a cics region cicsts61.
 
-the input, processing and formatting functionality should be implemented in separate subroutines
-that are invoked with the call statement.
-generate build and execute jcl for the program.
-generate a README.md markdown file documenting all aspects (including building and executing) of the program.
+generate a load dataset with plausible random content for the database. generate jcl to prime the database with that data.
 
+generate a readme.md file with all notes created during generation. 
 collect all generated files in a .zip archive ready for download.
