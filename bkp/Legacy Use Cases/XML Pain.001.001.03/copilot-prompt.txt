@@ -1,0 +1,7 @@
+generate a cobol batch program for IBM Enterprise COBOL on z/OS that reads an fixed block sequential dataset
+with funds transfer requests, formats them as sepa pain 001 xml records with xml generate
+and writes the result utf8 encoded to a vb dataset.
+Generate jcl to build and execute the program. 
+Generate an lrecl 80 file with 100 random funds transfer transactions. 
+Generate a readme.md file documenting all generation steps and the usage of the batch program.
+Collect all generated files in a .zip archive and make that ready for download.

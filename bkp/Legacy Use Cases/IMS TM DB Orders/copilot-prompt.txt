@@ -1,0 +1,7 @@
+generate an ims tm cobol program that uses exec dli to interface with an ims db database managing customer static data and orders.
+generate a simple 3270 interface to capture a new order for an existing user.
+generate jcl to compile and install.
+generate JCL for unloading orders in 2 alternatives.
+first with DFSRRC00. second with the DFSURGU0 IMS Unload utility.
+generate a readme.md file documenting the build and installation steps.
+collect all files in a zip archive and make that ready for download.

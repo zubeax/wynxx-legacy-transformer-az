@@ -1,0 +1,7 @@
+{
+    "description": "Create ECB Payment Statistics per Regulation ECB 2020/59",
+    "runtime": "jes2",
+    "language": "cobol",
+    "filesystem": "qsam",
+    "features" : [ "XML Generate" ]
+}

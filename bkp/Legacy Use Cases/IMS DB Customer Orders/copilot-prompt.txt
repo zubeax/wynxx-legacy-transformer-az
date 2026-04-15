@@ -1,0 +1,24 @@
+generate ibm ims ddl and dml for a database managing customer static data and orders.
+
+Generate IMS batch message processing versions. Generate advanced SSA logic. 
+Add support for HIDAM datasets.
+generate jcl to submit the create commands to ims db.
+generate ddl to create the ims database in vsam datasets. generate jcl for a ksds hidam dataset and use dbrc haldb.
+Generate JCL for PSINDEX allocation.
+
+Generate benchmark JCL for HIDAM and generate benchmark harness program.
+Generate a full test JCL suite.
+
+generate an ims db cobol program to insert, update, delete and retrieve records from this database.
+generate jcl to compile the program.
+generate jcl to execute the program.
+
+generate a java application that uses the ims universal jdbc driver to read and update 
+the database created from the generated ddl.
+wrap this in a Spring Boot app with a pooled DataSource and REST endpoints 
+and add TLS configuration that matches the IMS Connect keystores.
+
+collect all generated files in a .zip archive. 
+collect all generated documentation notes in a readme.md file and add that to the .zip archive. 
+make the .zip archive ready for download
+

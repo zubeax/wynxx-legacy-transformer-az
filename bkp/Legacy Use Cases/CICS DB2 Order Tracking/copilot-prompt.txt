@@ -1,0 +1,11 @@
+generate an ibm enterprise cobol program that interfaces to a simple db2 v13 database for managing client static data and tracking orders.
+generate the ddl for creating the database.
+generate the cics bms user interface for querying the database and to insert/update/delete records.
+
+generate jcl to build the program executables, assembling the bms maps and creating the database. 
+generate instructions how to install the program and the bms maps in a cics region cicsts61.
+
+generate a load dataset with plausible random content for the database. generate jcl to prime the database with that data.
+
+generate a readme.md file with all notes created during generation. 
+collect all generated files in a .zip archive ready for download.

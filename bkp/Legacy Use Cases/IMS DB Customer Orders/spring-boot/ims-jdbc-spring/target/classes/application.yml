@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      pool-name: ims-hikari-pool
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+ims:
+  host: imsconnect.example.com
+  port: 8888
+  datastore: IMSDATA
+  psb: CUSTORDPSB
+  user: ${IMS_USER:USER001}
+  password: ${IMS_PASS:password}
+  ssaOptimization: true
+  pcbName: ""
+  tls:
+    enabled: true
+    truststore: file:/opt/ims/tls/truststore.jks
+    truststorePassword: ${IMS_TLS_TRUSTPASS:changeit}
+    keystore: file:/opt/ims/tls/keystore.p12
+    keystorePassword: ${IMS_TLS_KEYPASS:changeit}
+    keystoreType: PKCS12
+    protocol: TLSv1.2

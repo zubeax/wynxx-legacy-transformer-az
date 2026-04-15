@@ -1,0 +1,6 @@
+{
+    "description": "This package contains a simple CICS application that demonstrates how to use the CICS API to read and write data to a DB2 database.",
+    "runtime": "cics",
+    "language": "cobol",
+    "database": "db2"
+}

@@ -168,8 +168,8 @@
       * -------------------------------------------------------------
        GET-TIMESTAMP.
            ACCEPT WS-TIMESTAMP FROM TIME.
-      * WS-TIMESTAMP format is site-dependent; as a demo, just map
-      * numeric characters into a 14-byte order-id placeholder.
+           * WS-TIMESTAMP format is site-dependent; as a demo, just map
+           * numeric characters into a 14-byte order-id placeholder.
            MOVE WS-TIMESTAMP(1:14)       TO WS-ORDER-ID.
 
        END PROGRAM ORDENTR.

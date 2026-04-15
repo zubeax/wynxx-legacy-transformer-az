@@ -1,0 +1,6 @@
+{
+    "description": "Cobol Hello World example",
+    "runtime": "jes2",
+    "language": "cobol",
+    "filesystem": "qsam"
+}

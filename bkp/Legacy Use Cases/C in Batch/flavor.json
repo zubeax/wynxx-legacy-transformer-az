@@ -1,0 +1,6 @@
+{
+    "description": "A simple C program that copies an input to an output file.",
+    "runtime": "uss",
+    "language": "c",
+    "scheduler": "jes2"
+}

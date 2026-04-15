@@ -1,0 +1,7 @@
+INIT_CHANNEL,DESCRIPTION
+PAPER,Paper-based / OTC
+ELECTRONIC,Electronic (non-remote)
+REMOTE_ELECTRONIC,"Remote electronic (e.g., internet, app)"
+MOBILE,Mobile proximity or P2P initiation
+PIS,Payment initiation service
+OTHER,Other/unknown

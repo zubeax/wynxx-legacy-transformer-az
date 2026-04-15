@@ -1,0 +1,7 @@
+{
+    "description": "XML Pain.001.001.03 COBOL Package for z/OS",
+    "runtime": "jes2",
+    "language": "cobol",
+    "filesystem": "qsam",
+    "features" : [ "XML Generate" ]
+}

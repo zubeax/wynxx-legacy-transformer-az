@@ -1,0 +1,30 @@
+
+***************************************************
+* HWSCFG00 — IMS Connect with RACF + Internal SSL (single SSL port)
+* Define exactly ONE SSLPORT; SSLENVAR points to SSL init file in USS.
+***************************************************
+HWS(
+  ID=HWS1,
+  RACF=Y,
+  XIBAREA=20
+)
+
+TCPIP(
+  HOSTNAME=IMSCHOST,
+  PORTID=(9999),                 * Optional non‑SSL admin/test port
+  SSLPORT=9443,                  * ONLY one SSL port allowed
+  SSLENVAR=/u/ims/icon/sslparm,  * SSL init file
+  MAXSOC=2000,
+  WARNSOC=1800,WARNINC=50,
+  TIMEOUT=8888,
+  EXIT=(HWSSMPL0),
+  RACFID=HWSSTC
+)
+
+DATASTORE(
+  ID=IMS1,
+  GROUP=IMSPLEXG,
+  MEMBER=ICONMEM,
+  TMEMBER=IMSPLEX1,
+  DRU=HWSYDRU0
+)
