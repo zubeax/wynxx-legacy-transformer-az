@@ -1,7 +1,0 @@
-{
-    "description": "generate a random transaction file in REXX then sort with ICETOOL",
-    "runtime": "jes2",
-    "languages": ["JCL","REXX"],
-    "filesystem": "qsam",
-    "features" : [ "ICETOOL" ]
-}

@@ -1,9 +1,0 @@
-Modify the previous package by replacing the trigger event from receiving an inbound message over MQ Series 
-to executing the program via the Cics transaction gateway. The payload format is the same. 
-
-Generate documentation for the required CICS configuration. 
-Generate a simple ctg java client that reads the payload from a text file and sends it to the cobol CTG server program.
-the reply from the cobol is an 80 character string that should be printed to the console. 
-
-generate a readme.md file with installation, configuration and execution instructions. 
-collect all generated files in a .zip archive ready for download.

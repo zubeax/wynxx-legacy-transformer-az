@@ -1,8 +1,0 @@
-NON_SCA_REASON,DESCRIPTION
-NA,Not applicable / SCA applied
-LVA,Low value amount exemption
-TRA,Transaction risk analysis exemption
-RECUR,Recurring / trusted beneficiary
-MOTO,Mail order / telephone order
-MIT,Merchant initiated transaction
-OTH,Other exemption

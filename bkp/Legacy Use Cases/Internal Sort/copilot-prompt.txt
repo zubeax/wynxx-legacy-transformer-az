@@ -1,4 +1,0 @@
-generate a cobol batch program for IBM Enterprise COBOL on z/OS that uses an internal sort to sort an input file
-with german dta record type c records on creditor bankleitzahl and account number.
-generate a readme.md file with documentation.
-add all files to a zip archive and make that archive ready for download

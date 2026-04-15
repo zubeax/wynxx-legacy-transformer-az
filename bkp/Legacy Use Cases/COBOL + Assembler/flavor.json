@@ -1,6 +1,0 @@
-{
-    "description": "Call Assembler from COBOL",
-    "runtime": "jes2",
-    "languages": [ "cobol", "assembler" ],
-    "filesystem": "qsam"
-}

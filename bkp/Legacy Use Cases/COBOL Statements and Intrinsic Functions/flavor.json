@@ -1,6 +1,0 @@
-{
-    "description": "Exhaustive set of COBOL statements and intrinsic functions",
-    "runtime": "jes2",
-    "language": "cobol",
-    "filesystems": [ "qsam", "vsam" ]
-}
