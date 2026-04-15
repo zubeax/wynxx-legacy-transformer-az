@@ -1,89 +1,83 @@
+# SECTDRIV – COBOL Section Driver (Enterprise COBOL 6.4)
 
-# CICS/DB2 Sample – Client/Order Management
+This project delivers a fixed-format COBOL batch **section driver** that organizes
+**dedicated sections for many COBOL statements and *all* documented intrinsic functions (per IBM 6.4 list)**.
+Each section parses dynamic parameters from an FB **LRECL 132** input file `SYS010` and logs
+outputs to an FB **LRECL 132** log (`SYS011`). A separate section demonstrates reading a **KSDS**
+`SYS020` by 8-byte key. All sections end with an explicit `EXIT`.
 
-This package contains a minimal, end-to-end example of an **IBM Enterprise COBOL** program for **CICS TS 6.1** that accesses **Db2 13 for z/OS** to maintain client static data and track orders. It includes:
+> **Formatting rules**
+>
+> * Comment lines have `*` in **column 7**.
+> * Source lines are wrapped so no text extends beyond **column 72**;
+>   continuation lines use `-` in column 7 and start in Area B.
+> * Working-Storage item names are kept intact; long `PIC`/`USAGE` clauses are wrapped to the next line.
+>
+> These behaviors follow IBM's fixed-format rules and continuation guidance.
 
-- COBOL CICS/Db2 program (`CLORDCIC`) with pseudo-conversational flow
-- BMS mapset (`CLMAPS`) with three maps (menu, client CRUD, order CRUD)
-- Db2 DDL (database, tablespaces, tables, indexes, grants)
-- JCL to assemble BMS, precompile/compile/link/bind COBOL, create the database, and prime it with data using the Db2 **LOAD** utility
-- Plausible random load data files (`clients.dat`, `orders.dat`)
-
-> **Note**: Adjust HLQs, libraries, subsystem ids, and procedures to your site standards before submitting jobs.
-
-## Contents
-
-```
-cics_db2_sample/
-  src/cobol/CLORDCIC.cbl
-  src/bms/CLMAPS.bms
-  db/ddl/db2_ddl.sql
-  jcl/assemble_bms.jcl
-  jcl/compile_bind.jcl
-  jcl/create_db.jcl
-  jcl/bind_plan_package.jcl (included inside compile_bind)
-  jcl/allocate_load_datasets.jcl
-  jcl/load_clients.jcl
-  jcl/load_orders.jcl
-  data/clients.dat
-  data/orders.dat
-  README.md
-```
-
-## Build order
-
-1. **Assemble BMS maps** (`jcl/assemble_bms.jcl`) using the supplied `DFHMAPS` proc to produce the **physical mapset** in your CICS LOADLIB and the **symbolic copybook** into `your.cobol.copylib`.
-   - Put the physical mapset load module in a library available to the region through **DFHRPL** or a dynamic LIBRARY resource. citeturn1search45turn1search40turn1search44
-2. **Create Db2 database & objects** using `jcl/create_db.jcl`, which runs the SQL in `db/ddl/db2_ddl.sql` via **DSNTEP2** dynamic SQL program. Ensure `SYSPRINT` LRECL conforms (133 by default). citeturn1search34
-3. **Precompile/Compile/Link** the COBOL program with `jcl/compile_bind.jcl` (uses **DSNHPC** precompiler, COBOL compiler, and IEWL link-edit), then **BIND** a package and a plan with **IKJEFT01/DSN** commands. citeturn1search28turn1search31turn1search13
-4. **Allocate and upload load data** (`jcl/allocate_load_datasets.jcl`), then **LOAD** the two tables with `jcl/load_clients.jcl` and `jcl/load_orders.jcl` using the Db2 **LOAD** utility with delimited input (`TERMINATED BY '|'`). citeturn1search11turn1search12
-
-## Installing in a CICS TS 6.1 region (CICSTS61)
-
-1. Ensure the **mapset** and **program** load modules are available to the region (DFHRPL concatenation or dynamic LIBRARY). Then define the resources with RDO/`CEDA`:
+## Structure
 
 ```
-CEDA DEF GROUP(CLAPPGRP) MAPSET(CLMAPS)  DESCRIPTION('Client/Order maps')
-CEDA DEF GROUP(CLAPPGRP) PROGRAM(CLORDCIC) LANGUAGE(COBOL) DATALOCATION(ANY) CONCURRENCY(THREADSAFE)
-CEDA DEF GROUP(CLAPPGRP) TRANSACTION(CLOR) PROGRAM(CLORDCIC) PROFILE()
-CEDA DEF GROUP(CLAPPGRP) DB2CONN(DB2A) DB2ID(DB2A)
-CEDA DEF GROUP(CLAPPGRP) DB2ENTRY(CLE1) THREADLIMIT(10) PLAN(CLORDPLN)
-CEDA DEF GROUP(CLAPPGRP) DB2TRAN(CLD1) ENTRY(CLE1) TRANSID(CLOR)
-CEDA INSTALL GROUP(CLAPPGRP)
+src/SECTDRIV.cbl          # Main program (fixed-format) with sections
+jcl/BUILD.jcl             # Compile (IGYCRCTL) and link-edit (IEWL) JCL
+jcl/ALLOC_LOAD_KSDS.jcl   # IDCAMS JCL to define and load VSAM KSDS
+jcl/RUN_SECTDRIV.jcl      # Execution JCL
+data/sys010.sample        # Sample FB 132 input (10 records per section)
+data/sys020.load          # Sample KSDS load data (FB 132)
+README.md                 # This file
 ```
 
-   - **DB2CONN/DB2ENTRY/DB2TRAN** are the standard CICS–Db2 attachment resources used to connect the region to Db2 and route transactions to threads/plans. Bind your package(s) to a plan and associate it via DB2ENTRY/DB2TRAN. citeturn1search2turn1search1
-   - After deploying code, use `CEMT SET PROGRAM(CLORDCIC) NEWCOPY` and (if needed) `CEMT SET MAPSET(CLMAPS) NEWCOPY`. citeturn1search40
+### Files and DD names
+- **SYS010**: FB **LRECL 132** input. Columns:
+  - 1–8: Section ID (8 chars) – free text, echoed to the log.
+  - 10–39: Operation (function name or statement keyword).
+  - 41–132: Comma-separated parameters for that operation.
+- **SYS011**: FB **LRECL 132** log. Each line begins with the 8-char Section ID, then a space and message.
+- **SYS020**: KSDS (132 bytes), key is **first 8 bytes**.
 
-2. Start the Db2 connection: `CEMT SET DB2CONN START` and verify with `CEMT INQUIRE DB2CONN`. citeturn1search2
+### Driver behavior
+1. `MAIN-SECTION` opens files, reads `SYS010` sequentially.
+2. For each record, it fills `WS-SECID`, `WS-OP-NAME`, and `WS-ARG-TEXT`.
+3. `PARSE-ARGS` splits parameters by comma into `WS-ARGn-STR` and `WS-ARGn-NUM` (also using `NUMVAL`).
+4. `DISPATCH-SECTION` `EVALUATE`s `WS-OP-NAME` and `PERFORM`s the matching section.
+5. Each section computes a result and calls `LOG-SECTION` which writes a 132-byte log record to `SYS011`.
 
-3. From a 3270 terminal, run transaction **CLOR** to reach the menu. Use PF3 or clear to exit.
+## Intrinsic functions covered
+All intrinsic functions listed in the IBM **Enterprise COBOL 6.4** language reference are implemented with a dedicated section and a function call. Examples: `ABS`, `ACOS`, `ANNUITY`, `BIT-OF`, `BYTE-LENGTH`, `COMBINED-DATETIME`, `CONTENT-OF`, `CURRENT-DATE`, `DATE-TO-YYYYMMDD`, `E`, `EXP`, `EXP10`, `FACTORIAL`, `FORMATTED-…`, `HEX-…`, `INTEGER-…`, `LENGTH`, `LOG`, `LOG10`, `LOWER-CASE`, `MAX`, `MEAN`, `MEDIAN`, `MIDRANGE`, `MIN`, `MOD`, `NATIONAL-OF`, `NUMVAL*`, `ORD*`, `PI`, `PRESENT-VALUE`, `RANDOM`, `RANGE`, `REM`, `REVERSE`, `SECONDS-…`, `SIGN`, `SIN`, `SQRT`, `STANDARD-DEVIATION`, `SUM`, `TAN`, `TEST-…`, `TRIM`, `U* (UTF-8/UTF-16 helpers)`, `UUID4`, `VARIANCE`, `WHEN-COMPILED`, `YEAR-TO-YYYY`.
 
-## Program notes
+> The program **parses per-function arguments** from `SYS010` dynamically and supplies them to the function call in the relevant section.
 
-- The COBOL program uses `EXEC CICS SEND/RECEIVE MAP` against the **CLMAPS** BMS mapset. Update flow is pseudo‑conversational via `RETURN TRANSID('CLOR') COMMAREA(...)`. The symbolic map copybook is produced by assembling the BMS with `LANG=COBOL`. citeturn1search46turn1search49
-- SQL is embedded with host variables and precompiled by **DSNHPC**. BIND creates a **package** (collection `CLAPPKG`) and a **plan** (`CLORDPLN`). The job stream uses **IKJEFT01** to issue BIND commands. citeturn1search28turn1search13
-- The DDL uses the default stogroup `SYSDEFLT` and two simple tablespaces. Adjust bufferpools and stogroup to your shop standards.
-- The LOAD control statements use delimited input (`|`) and external decimal for amounts; they follow Db2 LOAD utility conventions for data sets and required DD names. citeturn1search11turn1search12
+## Statement sections
+Representative sections are provided for common COBOL statements: arithmetic (`ADD`, `SUBTRACT`, `MULTIPLY`, `DIVIDE`, `COMPUTE`), data movement (`MOVE`, `STRING`, `UNSTRING`, `INSPECT`, `INITIALIZE`), control flow (`IF`, `EVALUATE`, `PERFORM`, `CONTINUE`, `EXIT`, `GOBACK`, `STOP RUN`), file handling (`OPEN`, `READ`, `WRITE`, `REWRITE`, `START`, `CLOSE`, `RETURN`, `RELEASE`, `MERGE`, `SORT`, `SEARCH`, `SET`), and JSON (`JSON PARSE`, `JSON GENERATE`). Each one logs input/output with its own 8-char ID.
 
-## Troubleshooting quick tips
+## Sample input (data/sys010.sample)
+A **10-record sample** is generated for **each function and statement section**, plus a `KSDS-READ` demo. Records are 132 chars. Example (visualized):
 
-- **DSNTEP2** abend U4038 reason 1 usually means `SYSPRINT` LRECL doesn't match the program's page width (133). Allocate `SYSPRINT` with `RECFM=FBA,LRECL=133`, or omit DCB so defaults apply. citeturn1search34
-- If BIND fails with `SQLERROR (NOPACKAGE)` or similar, confirm DBRM was created in the precompile step and that collection/qualifier match your BIND JCL. citeturn1search16
-- If the CICS program gets `SQLCODE -923` or `-805`, check that CICS is connected to Db2 and that your package exists and is in a plan referenced by DB2ENTRY/DB2TRAN. citeturn1search2
+```
+FNABS   | ABS                           | 1
+FNLOG10 | LOG10                         | 1000
+STADD001| ADD                           | 1,2
+KSDS0001| KSDS-READ                     | KEY00001
+```
 
-## Security and environments
+## VSAM KSDS
+A KSDS named `&SYSUID..SECT.SYS020.CLUSTER` is defined with `KEYS(8 0)` and `RECORDSIZE(132 132)`. Load data is supplied in `data/sys020.load` and can be uploaded to `&SYSUID..SECT.SYS020.LOAD` for the `REPRO` step.
 
-- Replace public GRANTs with least-privilege GRANTs appropriate to your runtime authid.
-- All dataset and library names in JCL are examples; coordinate with your system programmer for correct procs, libraries, and APF/LPA considerations in CTS 6.1+. citeturn1search42
+## Build & Run
+1. **Compile & Link** – submit `jcl/BUILD.jcl`. Adjust library DSNs as needed (`SIGYCOMP`, `SCEERUN`, `SCEELKED`). The load module is written to `&SYSUID..SECTLOAD(SECTDRIV)`.
+2. **Allocate & Load KSDS** – submit `jcl/ALLOC_LOAD_KSDS.jcl` after copying `data/sys020.load` to `&SYSUID..SECT.SYS020.LOAD`.
+3. **Prepare input** – upload `data/sys010.sample` to `&SYSUID..SECT.SYS010.INPUT` as **FB LRECL 132**.
+4. **Run** – submit `jcl/RUN_SECTDRIV.jcl`. Logs appear in `SYS011` SYSOUT.
 
-## Credits & References
+## Notes
+- **Signed integers** in Working-Storage use `SIGN IS LEADING EXTERNAL` per your requirement.
+- Source adheres to fixed-format rules: `*` in column 7 for comments, wrapped at column 72 with `-` continuations where needed.
+- Section endings: every section uses `EXIT.` as the final statement.
 
-- IBM Docs: **DSNTEP2** sample dynamic SQL program and LRECL requirements. citeturn1search34
-- IBM Docs: **Db2 LOAD** utility – required DD names and sample control statements. citeturn1search11turn1search12
-- IBM Docs / Community samples: **Db2 precompiler & COBOL compile JCL**, **BIND** samples. citeturn1search28turn1search31turn1search13
-- IBM Docs: **CICS BMS** map creation and installation; DFHRPL/dynamic LIBRARY usage. citeturn1search45turn1search43turn1search44
-- IBM Docs: **CICS–Db2 connection** resources (**DB2CONN/DB2ENTRY/DB2TRAN**). citeturn1search2turn1search1
+## References
+- IBM Enterprise COBOL 6.4 – **Intrinsic Functions** list and details.  
+- IBM Docs – **Using intrinsic functions** (overview and usage).  
+- IBM Docs – **Continuation lines & fixed format rules**.  
+- IBM Docs – **Programming Guide / compile JCL** (IGYCRCTL usage).  
+- IBM Docs – **IDCAMS examples** (DEFINE/REPRO for KSDS).
 
----
-Generated on 2026-03-20 08:35 UTC.
