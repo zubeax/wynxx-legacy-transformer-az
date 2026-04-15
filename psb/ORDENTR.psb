@@ -1,0 +1,11 @@
+* --------------------------------------------------------------------
+* PSBGEN for ORDENTR MPP
+*  - I/O PCB for message handling
+*  - DB PCB for CUSTDB (read)
+*  - DB PCB for ORDRDB (insert)
+* --------------------------------------------------------------------
+         PSB   PSBNAME=ORDENTR,LANG=COBOL
+         PCB   TYPE=TP,MODNAME=ORDENTRO
+         PCB   TYPE=DB,DBDNAME=CUSTDB,PROCOPT=G
+         PCB   TYPE=DB,DBDNAME=ORDRDB,PROCOPT=A
+         END

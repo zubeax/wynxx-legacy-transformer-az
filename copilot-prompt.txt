@@ -1,8 +1,7 @@
-
-generate an cics cobol program that is triggered by an mq series initq event.
-the programs reads an order request from the local queue and persists it in the database.
-it then sends a confirmation message to the reply-to queue specified in the original request.
-generate jcl to create the mq series objects required as infrastructure.
-
-generate instructions for the cics configuration required to initiate cics transactions.
-generate a new readme.md file with all generation notes and then create a .zip archive with the full package ready for download.
+generate an ims tm cobol program that uses exec dli to interface with an ims db database managing customer static data and orders.
+generate a simple 3270 interface to capture a new order for an existing user.
+generate jcl to compile and install.
+generate JCL for unloading orders in 2 alternatives.
+first with DFSRRC00. second with the DFSURGU0 IMS Unload utility.
+generate a readme.md file documenting the build and installation steps.
+collect all files in a zip archive and make that ready for download.

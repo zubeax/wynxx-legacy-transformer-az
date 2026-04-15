@@ -1,0 +1,11 @@
+* --------------------------------------------------------------------
+* DBDGEN for CUSTOMER database (HISAM for simplicity)
+* Root segment: CUSTROOT keyed by CUST-ID
+* --------------------------------------------------------------------
+         DBD   NAME=CUSTDB,ACCESS=HISAM
+         DATASET DD1=IMS.CUSTDB,DEVICE=3380
+         SEGM  NAME=CUSTROOT,BYTES=80
+         FIELD NAME=(CUST-ID,SEQ,U),BYTES=10,START=1
+         FIELD NAME=CUST-NAME,BYTES=30,START=11
+         FIELD NAME=CUST-ADDR,BYTES=40,START=41
+         END

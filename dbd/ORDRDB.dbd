@@ -1,0 +1,13 @@
+* --------------------------------------------------------------------
+* DBDGEN for ORDER database (HISAM for simplicity)
+* Root segment: ORDERSEG keyed by ORDER-ID
+* --------------------------------------------------------------------
+         DBD   NAME=ORDRDB,ACCESS=HISAM
+         DATASET DD1=IMS.ORDRDB,DEVICE=3380
+         SEGM  NAME=ORDERSEG,BYTES=52
+         FIELD NAME=(ORDER-ID,SEQ,U),BYTES=14,START=1
+         FIELD NAME=ORD-CUST-ID,BYTES=10,START=15
+         FIELD NAME=ORD-ITEM-ID,BYTES=10,START=25
+         FIELD NAME=ORD-QUANTITY,BYTES=5,START=35
+         FIELD NAME=ORD-ORDER-DATE,BYTES=8,START=40
+         END

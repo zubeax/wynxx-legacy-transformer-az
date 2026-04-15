@@ -1,6 +1,10 @@
 {
-    "description": "Adds a request-processing-via-MQSeries feature to the CICS Order Tracking application",
-    "runtime": "cics",
+    "description": "Order Management Application using IMS TM and IMS DB",
+    "runtimes": [
+        "ims-tm",
+        "jes2"
+    ],
     "language": "cobol",
-    "database": "db2"
+    "scheduler": "jes2",
+    "database": "ims-db"
 }

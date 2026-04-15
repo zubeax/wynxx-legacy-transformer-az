@@ -1,0 +1,19 @@
+* --------------------------------------------------------------------
+* IMS MFS for 3270 Order Entry Screen (simplified example)
+* Generates MID (input) and MOD (output)
+* --------------------------------------------------------------------
+         MSG  ORDENTRM, TYPE=INPUT
+         MID  ORDENTRM, LINE=24, TIOAPFX=YES, LANG=COBOL
+         DFLD CUSTID, POS=(03,20), LENGTH=10, ATTRB=(NUM), JUST=LEFT
+         DFLD ITEMID, POS=(04,20), LENGTH=10, JUST=LEFT
+         DFLD QTY,    POS=(05,20), LENGTH=5,  ATTRB=(NUM), JUST=RIGHT
+         DFLD ODATE,  POS=(06,20), LENGTH=8,  JUST=LEFT
+         END
+
+         MSG  ORDENTRO, TYPE=OUTPUT
+         MOD  ORDENTRO, LINE=24, TIOAPFX=YES, LANG=COBOL
+         MFLD OUTMSG,  POS=(03,10), LENGTH=60
+         MFLD OORDID,  POS=(04,10), LENGTH=14
+         END
+
+* Note: Use DFSUPAA0 to translate MFS and produce COBOL copy members.
