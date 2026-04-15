@@ -1,6 +1,10 @@
 {
-    "description": "Exhaustive set of COBOL statements and intrinsic functions",
-    "runtime": "jes2",
+    "description": "An order tracking application that uses CICS and DB2 to manage customer orders.",
+    "runtimes": [
+        "cics",
+        "jes2"
+    ],
     "language": "cobol",
-    "filesystems": [ "qsam", "vsam" ]
+    "scheduler": "jes2",
+    "database": "db2"
 }
