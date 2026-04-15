@@ -1,11 +1,8 @@
-generate an ibm enterprise cobol program that interfaces to a simple db2 v13 database for managing client static data and tracking orders.
-generate the ddl for creating the database.
-generate the cics bms user interface for querying the database and to insert/update/delete records.
 
-generate jcl to build the program executables, assembling the bms maps and creating the database. 
-generate instructions how to install the program and the bms maps in a cics region cicsts61.
+generate an cics cobol program that is triggered by an mq series initq event.
+the programs reads an order request from the local queue and persists it in the database.
+it then sends a confirmation message to the reply-to queue specified in the original request.
+generate jcl to create the mq series objects required as infrastructure.
 
-generate a load dataset with plausible random content for the database. generate jcl to prime the database with that data.
-
-generate a readme.md file with all notes created during generation. 
-collect all generated files in a .zip archive ready for download.
+generate instructions for the cics configuration required to initiate cics transactions.
+generate a new readme.md file with all generation notes and then create a .zip archive with the full package ready for download.
