@@ -1,0 +1,1170 @@
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNABS    ABS                            1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNACOS   ACOS                           1                                                                                           
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNANNUIT ANNUITY                        1,2,3                                                                                       
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNASIN   ASIN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNATAN   ATAN                           1                                                                                           
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITOF  BIT-OF                         ABCdef                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBITTOC BIT-TO-CHAR                    0A0B0C                                                                                      
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNBYTELE BYTE-LENGTH                    1234                                                                                        
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCHAR   CHAR                           1                                                                                           
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCOMBIN COMBINED-DATETIME              1,2                                                                                         
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCONTEN CONTENT-OF                     1234                                                                                        
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCURREN CURRENT-DATE                                                                                                               
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNCOS    COS                            1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATEOF DATE-OF-INTEGER                1                                                                                           
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDATETO DATE-TO-YYYYMMDD               1,2                                                                                         
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYOFI DAY-OF-INTEGER                 1                                                                                           
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDAYTOY DAY-TO-YYYYDDD                 1,2                                                                                         
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNDISPLA DISPLAY-OF                     ABCdef                                                                                      
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNE      E                                                                                                                          
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP    EXP                            1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNEXP10  EXP10                          1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFACTOR FACTORIAL                      1                                                                                           
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-CURRENT-DATE         YYYY-MM-DDTHH:MM:SS                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATE                 1,2                                                                                         
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-DATETIME             1,2,3                                                                                       
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNFORMAT FORMATTED-TIME                 1,2                                                                                         
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXOF  HEX-OF                         ABCdef                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNHEXTOC HEX-TO-CHAR                    0A0B0C                                                                                      
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER                        1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DATE                1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-DAY                 1                                                                                           
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-OF-FORMATTED-DATE      2024-01-15                                                                                  
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNINTEGE INTEGER-PART                   1                                                                                           
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLENGTH LENGTH                         1234                                                                                        
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG    LOG                            1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOG10  LOG10                          1                                                                                           
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNLOWERC LOWER-CASE                     ABCdef                                                                                      
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMAX    MAX                            1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEAN   MEAN                           1,2                                                                                         
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMEDIAN MEDIAN                         1,2,3                                                                                       
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIDRAN MIDRANGE                       1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMIN    MIN                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNMOD    MOD                            1,2                                                                                         
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNATION NATIONAL-OF                    ABCdef                                                                                      
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL                         1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-C                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNNUMVAL NUMVAL-F                       1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORD    ORD                            1234                                                                                        
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMAX ORD-MAX                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNORDMIN ORD-MIN                        1,2,3                                                                                       
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPI     PI                                                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNPRESEN PRESENT-VALUE                  1,2                                                                                         
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANDOM RANDOM                         1                                                                                           
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNRANGE  RANGE                          1,2,3                                                                                       
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREM    REM                            1,2                                                                                         
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNREVERS REVERSE                        ABCdef                                                                                      
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-FROM-FORMATTED-TIME    12:34:56                                                                                    
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSECOND SECONDS-PAST-MIDNIGHT                                                                                                      
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIGN   SIGN                           1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSIN    SIN                            1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSQRT   SQRT                           1                                                                                           
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSTANDA STANDARD-DEVIATION             1,2,3                                                                                       
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNSUM    SUM                            1,2                                                                                         
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTAN    TAN                            1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DATE-YYYYMMDD             1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTDA TEST-DAY-YYYYDDD               1                                                                                           
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTFO TEST-FORMATTED-DATETIME        12:34:56                                                                                    
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL                    1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-C                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTESTNU TEST-NUMVAL-F                  1234                                                                                        
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNTRIM   TRIM                           ABCdef                                                                                      
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNULENGT ULENGTH                        1234                                                                                        
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPOS   UPOS                           1,2                                                                                         
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUPPERC UPPER-CASE                     ABCdef                                                                                      
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUBST USUBSTR                        1,2,3                                                                                       
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUSUPPL USUPPLEMENTARY                 ABCdef                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUUID4  UUID4                                                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUVALID UVALID                         ABCdef                                                                                      
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNUWIDTH UWIDTH                         1,2                                                                                         
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNVARIAN VARIANCE                       1,2,3                                                                                       
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNWHENCO WHEN-COMPILED                                                                                                              
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+FNYEARTO YEAR-TO-YYYY                   1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STADD001 ADD                            1,2                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STSUB001 SUBTRACT                       5,3                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STMUL001 MULTIPLY                       7,8                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STDIV001 DIVIDE                         9,3                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STCMP001 COMPUTE                        3,4                                                                                         
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STMOV001 MOVE                           HELLO                                                                                       
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STDSP001 DISPLAY                        HELLO WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STSTR001 STRING                         HELLO,WORLD                                                                                 
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STUNS001 UNSTRING                       A,B,C                                                                                       
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINP001 INSPECT                        AAA                                                                                         
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STINI001 INITIALIZE                                                                                                                 
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STIF0001 IF                             1                                                                                           
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STEVA001 EVALUATE                       11                                                                                          
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STPER001 PERFORM                        0                                                                                           
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STOPN001 OPEN                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STRD0001 READ                                                                                                                       
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STWRT001 WRITE                          LOG LINE                                                                                    
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STRWT001 REWRITE                        UPDATED RECORD                                                                              
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STSTA001 START                          KEY00001                                                                                    
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCLS001 CLOSE                                                                                                                      
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAL001 CALL                           DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STCAN001 CANCEL                         DUMMYPROG                                                                                   
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STRET001 RETURN                                                                                                                     
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STREL001 RELEASE                                                                                                                    
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STMGE001 MERGE                                                                                                                      
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSRT001 SORT                                                                                                                       
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSET001 SET                            1                                                                                           
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STSCH001 SEARCH                                                                                                                     
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STCNT001 CONTINUE                                                                                                                   
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STEXT001 EXIT                                                                                                                       
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STGBK001 GOBACK                                                                                                                     
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STSPR001 STOP RUN                                                                                                                   
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNP001 JSON PARSE                     {"a":1}                                                                                     
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+STJNG001 JSON GENERATE                                                                                                              
+KSDS0001 KSDS-READ                      KEY00001                                                                                    
+KSDS0001 KSDS-READ                      KEY00002                                                                                    
+KSDS0001 KSDS-READ                      KEY00003                                                                                    
+KSDS0001 KSDS-READ                      KEY00004                                                                                    
+KSDS0001 KSDS-READ                      KEY00005                                                                                    
+KSDS0001 KSDS-READ                      KEY00006                                                                                    
+KSDS0001 KSDS-READ                      KEY00007                                                                                    
+KSDS0001 KSDS-READ                      KEY00008                                                                                    
+KSDS0001 KSDS-READ                      KEY00009                                                                                    
+KSDS0001 KSDS-READ                      KEY00010                                                                                    

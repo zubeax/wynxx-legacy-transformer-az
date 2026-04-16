@@ -1,10 +1,6 @@
 {
-    "description": "Order Management Application using IMS TM and IMS DB",
-    "runtimes": [
-        "ims-tm",
-        "jes2"
-    ],
+    "description": "Exhaustive set of COBOL statements and intrinsic functions",
+    "runtime": "jes2",
     "language": "cobol",
-    "scheduler": "jes2",
-    "database": "ims-db"
+    "filesystems": [ "qsam", "vsam" ]
 }

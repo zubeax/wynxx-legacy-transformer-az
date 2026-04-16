@@ -1,7 +1,26 @@
-generate an ims tm cobol program that uses exec dli to interface with an ims db database managing customer static data and orders.
-generate a simple 3270 interface to capture a new order for an existing user.
-generate jcl to compile and install.
-generate JCL for unloading orders in 2 alternatives.
-first with DFSRRC00. second with the DFSURGU0 IMS Unload utility.
-generate a readme.md file documenting the build and installation steps.
-collect all files in a zip archive and make that ready for download.
+generate a cobol program SECTDRIV that has dedicated sections for executing all cobol statements and intrinsic functions documented in ibm's cobol 6.4 language reference.
+the target compiler is ibm enterprise cobol 6.4. the program will execute as a batch program in jes2.
+
+ensure that the asterisk for comments is positioned in column 7. wrap all text that extends beyond column 72 to the next line, ensuring that statements are
+confined to area b. do not generate line numbers in columns 73:80 or labels in columns 1:6.
+
+the names of working storage items must not be truncated. wrap picture and usage clauses to the next line as required.
+make all called subroutines into sections with a 'section' tag and close them with an 'exit' statement.
+
+the program should read fields for input data of the sections from an fb lrecl 132 file sys010 
+and should then execute each section in a loop with a perform statement.
+Add per-function argument parsing from SYS010 to have dynamic parameters.
+each section should log its input and output data to an fb lrecl 132 file.
+each output line should be tagged with a unique 8 character id for the section.
+
+generate a sample input file with 10 records for each test section. signed integers should be declared with 'sign is leading external'.
+
+add a section for reading input from an lrecl 132 ksds VSAM file sys020 with an 8 character key. generate a sample load dataset.
+
+generate a readme.md file with complete documentation of program structure, usage, input and output files.
+
+generate jcl for building the executable. 
+generate IDCAMS jcl for allocating and loading the ksds vsam file. 
+generate jcl for executing the program.
+
+collect all files in a .zip archive ready for download.
