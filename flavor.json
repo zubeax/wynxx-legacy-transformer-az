@@ -1,5 +1,5 @@
 {
-    "description": "Create ECB Payment Statistics per Regulation ECB 2020/59",
+    "description": "XML Pain.001.001.03 COBOL Package for z/OS",
     "runtime": "jes2",
     "language": "cobol",
     "filesystem": "qsam",

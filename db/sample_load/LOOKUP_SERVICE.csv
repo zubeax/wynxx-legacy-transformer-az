@@ -1,9 +1,0 @@
-SERVICE_CODE,DESCRIPTION
-CREDIT_TRANSFER,Credit transfers (SEPA and non-SEPA)
-DIRECT_DEBIT,Direct debits (SEPA Core/B2B and others)
-CARD,Card-based payment transactions (debit/credit/delayed debit)
-E_MONEY,E-money payment transactions
-CASH_WITHDRAWAL,Cash withdrawals using card-based payment instruments
-CHEQUE,Cheque payments
-MONEY_REMITTANCE,Money remittances (as per PSD2)
-OTHER,Other payment services (incl. P2P mobile not elsewhere classified)
