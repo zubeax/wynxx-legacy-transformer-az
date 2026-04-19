@@ -1,0 +1,265 @@
+-- ddl_ecb_ECBSTATS_db2.sql
+-- DB2 z/OS DDL for a simplified schema that captures the core variables
+-- required to aggregate ECB payments statistics per Regulation (EU) 2020/2011
+-- (ECB/2020/59) amending Regulation (EU) No 1409/2013 (ECB/2013/43).
+-- This schema models payment services, initiation channels, card MCC, SCA flags
+-- scheme, fraud flags, and geographic dimensions frequently referenced
+-- in Annex I/II tables (e.g., Table 4a and 9). It is intended as an illustrativ
+-- schema for internal aggregation. For official reporting you must map to the
+-- National Central Bank XML/XSD.
+
+   COMMIT;
+   DROP DATABASE ECBSTATS;
+   COMMIT;
+
+   CREATE DATABASE ECBSTATS
+          STOGROUP DB200G
+          BUFFERPOOL BP0
+          CCSID EBCDIC;
+
+   COMMIT ;
+
+   CREATE TABLESPACE ECBSPC1
+     IN ECBSTATS
+     USING STOGROUP DB200G
+     SEGSIZE 4
+     LOCKSIZE TABLE
+     BUFFERPOOL BP0
+     CLOSE NO
+     CCSID EBCDIC;
+
+   CREATE TABLESPACE ECBSPC2
+     IN ECBSTATS
+     USING STOGROUP DB200G
+     SEGSIZE 4
+     LOCKSIZE TABLE
+     BUFFERPOOL BP0
+     CLOSE NO
+     CCSID EBCDIC;
+
+   CREATE TABLESPACE ECBSPC3
+     IN ECBSTATS
+     USING STOGROUP DB200G
+     SEGSIZE 4
+     LOCKSIZE TABLE
+     BUFFERPOOL BP0
+     CLOSE NO
+     CCSID EBCDIC;
+
+   CREATE TABLESPACE ECBSPC4
+     IN ECBSTATS
+     USING STOGROUP DB200G
+     SEGSIZE 4
+     LOCKSIZE TABLE
+     BUFFERPOOL BP0
+     CLOSE NO
+     CCSID EBCDIC;
+
+   CREATE TABLESPACE ECBSPC5
+     IN ECBSTATS
+     USING STOGROUP DB200G
+     SEGSIZE 4
+     LOCKSIZE TABLE
+     BUFFERPOOL BP0
+     CLOSE NO
+     CCSID EBCDIC;
+
+   CREATE TABLESPACE ECBSPC6
+     IN ECBSTATS
+     USING STOGROUP DB200G
+     SEGSIZE 4
+     LOCKSIZE TABLE
+     BUFFERPOOL BP0
+     CLOSE NO
+     CCSID EBCDIC;
+
+   CREATE TABLESPACE ECBSPC7
+     IN ECBSTATS
+     USING STOGROUP DB200G
+     SEGSIZE 4
+     LOCKSIZE TABLE
+     BUFFERPOOL BP0
+     CLOSE NO
+     CCSID EBCDIC;
+
+   COMMIT ;
+
+   GRANT DBADM ON DATABASE ECBSTATS
+         TO PUBLIC;
+
+   GRANT USE OF TABLESPACE ECBSTATS.ECBSPC1
+         TO PUBLIC;
+
+   GRANT USE OF TABLESPACE ECBSTATS.ECBSPC2
+         TO PUBLIC;
+
+   GRANT USE OF TABLESPACE ECBSTATS.ECBSPC3
+         TO PUBLIC;
+
+   GRANT USE OF TABLESPACE ECBSTATS.ECBSPC4
+         TO PUBLIC;
+
+   GRANT USE OF TABLESPACE ECBSTATS.ECBSPC5
+         TO PUBLIC;
+
+   GRANT USE OF TABLESPACE ECBSTATS.ECBSPC6
+         TO PUBLIC;
+
+   GRANT USE OF TABLESPACE ECBSTATS.ECBSPC7
+         TO PUBLIC;
+
+   COMMIT ;
+
+   CREATE TABLE DB.PAYMENT_TRANSACTIONS (
+    TRANS_ID            BIGINT        NOT NULL,
+    TRANS_TS            TIMESTAMP     NOT NULL,
+    SERVICE_CODE        VARCHAR(30)   NOT NULL,
+    INIT_CHANNEL        VARCHAR(30)   NOT NULL,
+    SCHEME_CODE         VARCHAR(40)           ,
+    SCA_APPLIED         CHAR(1)       NOT NULL WITH DEFAULT 'Y',
+    NON_SCA_REASON      VARCHAR(40)           ,
+    FRAUD_FLAG          CHAR(1)       NOT NULL WITH DEFAULT 'N',
+    FRAUD_ORIGIN        VARCHAR(20)           ,
+    AMOUNT_EUR          DECIMAL(15,2) NOT NULL,
+    CURRENCY            CHAR(3)       NOT NULL WITH DEFAULT 'EUR',
+    PAYER_COUNTRY       CHAR(2)       NOT NULL,
+    PAYEE_COUNTRY       CHAR(2)       NOT NULL,
+    POS_COUNTRY         CHAR(2)               ,
+    MCC                 CHAR(4)               ,
+    PRIMARY KEY (TRANS_ID))
+   IN ECBSTATS.ECBSPC1
+   CCSID EBCDIC;
+
+   CREATE UNIQUE INDEX ECBSTATS.ECBIDX1
+                    ON DB.PAYMENT_TRANSACTIONS
+                        (TRANS_ID ASC)
+                    USING STOGROUP DB200G
+                    ERASE NO
+                    BUFFERPOOL BP0
+                    CLOSE NO;
+
+   CREATE TABLE DB.LOOKUP_SERVICE (
+    SERVICE_CODE VARCHAR(30) NOT NULL,
+    DESCRIPTION  VARCHAR(200),
+    PRIMARY KEY (SERVICE_CODE)
+   )
+   IN ECBSTATS.ECBSPC2
+   CCSID EBCDIC;
+
+   CREATE UNIQUE INDEX ECBSTATS.ECBIDX2
+                    ON DB.LOOKUP_SERVICE
+                        (SERVICE_CODE ASC)
+                    USING STOGROUP DB200G
+                    ERASE NO
+                    BUFFERPOOL BP0
+                    CLOSE NO;
+
+   CREATE TABLE DB.LOOKUP_CHANNEL (
+    INIT_CHANNEL VARCHAR(30) NOT NULL,
+    DESCRIPTION  VARCHAR(200),
+    PRIMARY KEY (INIT_CHANNEL)
+   )
+   IN ECBSTATS.ECBSPC3
+   CCSID EBCDIC;
+
+   CREATE UNIQUE INDEX ECBSTATS.ECBIDX3
+                    ON DB.LOOKUP_CHANNEL
+                        (INIT_CHANNEL ASC)
+                    USING STOGROUP DB200G
+                    ERASE NO
+                    BUFFERPOOL BP0
+                    CLOSE NO;
+
+   CREATE TABLE DB.LOOKUP_SCA_REASON (
+    NON_SCA_REASON VARCHAR(40) NOT NULL,
+    DESCRIPTION    VARCHAR(200),
+    PRIMARY KEY (NON_SCA_REASON)
+   )
+   IN ECBSTATS.ECBSPC4
+   CCSID EBCDIC;
+
+   CREATE UNIQUE INDEX ECBSTATS.ECBIDX4
+                    ON DB.LOOKUP_SCA_REASON
+                        (NON_SCA_REASON ASC)
+                    USING STOGROUP DB200G
+                    ERASE NO
+                    BUFFERPOOL BP0
+                    CLOSE NO;
+
+   CREATE TABLE DB.LOOKUP_SCHEME (
+    SCHEME_CODE VARCHAR(40) NOT NULL,
+    DESCRIPTION VARCHAR(200),
+    PRIMARY KEY (SCHEME_CODE)
+   )
+   IN ECBSTATS.ECBSPC5
+   CCSID EBCDIC;
+
+   CREATE UNIQUE INDEX ECBSTATS.ECBIDX5
+                    ON DB.LOOKUP_SCHEME
+                        (SCHEME_CODE ASC)
+                    USING STOGROUP DB200G
+                    ERASE NO
+                    BUFFERPOOL BP0
+                    CLOSE NO;
+
+   CREATE TABLE DB.LOOKUP_COUNTRY (
+    ISO2 CHAR(2) NOT NULL,
+    NAME VARCHAR(100),
+    PRIMARY KEY (ISO2)
+   )
+   IN ECBSTATS.ECBSPC6
+   CCSID EBCDIC;
+
+   CREATE UNIQUE INDEX ECBSTATS.ECBIDX6
+                    ON DB.LOOKUP_COUNTRY
+                        (ISO2 ASC)
+                    USING STOGROUP DB200G
+                    ERASE NO
+                    BUFFERPOOL BP0
+                    CLOSE NO;
+
+   CREATE TABLE DB.LOOKUP_MCC (
+    MCC CHAR(4) NOT NULL,
+    NAME VARCHAR(200),
+    PRIMARY KEY (MCC)
+   )
+   IN ECBSTATS.ECBSPC7
+   CCSID EBCDIC;
+
+   CREATE UNIQUE INDEX ECBSTATS.ECBIDX7
+                    ON DB.LOOKUP_MCC
+                        (MCC ASC)
+                    USING STOGROUP DB200G
+                    ERASE NO
+                    BUFFERPOOL BP0
+                    CLOSE NO;
+
+   GRANT DELETE, INSERT, SELECT, UPDATE
+         ON TABLE DB.PAYMENT_TRANSACTIONS
+            TO PUBLIC;
+
+   GRANT DELETE, INSERT, SELECT, UPDATE
+         ON TABLE DB.LOOKUP_SERVICE
+            TO PUBLIC;
+
+   GRANT DELETE, INSERT, SELECT, UPDATE
+         ON TABLE DB.LOOKUP_CHANNEL
+            TO PUBLIC;
+
+   GRANT DELETE, INSERT, SELECT, UPDATE
+         ON TABLE DB.LOOKUP_SCA_REASON
+            TO PUBLIC;
+
+   GRANT DELETE, INSERT, SELECT, UPDATE
+         ON TABLE DB.LOOKUP_SCHEME
+            TO PUBLIC;
+
+   GRANT DELETE, INSERT, SELECT, UPDATE
+         ON TABLE DB.LOOKUP_COUNTRY
+            TO PUBLIC;
+
+   GRANT DELETE, INSERT, SELECT, UPDATE
+         ON TABLE DB.LOOKUP_MCC
+            TO PUBLIC;
+
+  COMMIT ;

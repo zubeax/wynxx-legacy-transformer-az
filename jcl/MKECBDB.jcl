@@ -1,0 +1,22 @@
+//MKECBDBX JOB (ACCT1,ACCT2,ACCT3),'MAKEECBDB',
+//             CLASS=A,MSGCLASS=X,MSGLEVEL=(1,1),
+//             REGION=256M,NOTIFY=&SYSUID
+//* ----------------------------------------------- *
+//* Use DSNTIAD to create the database              *
+//* ----------------------------------------------- *
+//CRCRDDB  EXEC PGM=IKJEFT01,DYNAMNBR=20
+//STEPLIB  DD DISP=SHR,DSN=DBD1.SDSNEXIT
+//         DD DISP=SHR,DSN=DB2V13.SDSNLOAD
+//         DD DISP=SHR,DSN=CEE.SCEERUN
+//SYSTSPRT DD SYSOUT=*
+//SYSUDUMP DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSTSIN  DD *
+  DSN SYSTEM(DBD1)
+  RUN PROGRAM(DSNTIAD)  -
+      PLAN(DSNTIA13)    -
+      LIBRARY('DBD1.RUNLIB.LOAD') -
+      PARM('RC0')
+  END
+/*
+//SYSIN    DD DISP=SHR,DSN=WYNXX.ECBSTATS.DDL(MKECBDB)
